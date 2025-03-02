@@ -70,7 +70,7 @@ export const ProjectCard = ({
             left={0}
             height="100%"
             width="100%"
-            objectFit="cover"
+            objectFit={title === "AutoDOCulus" ? "contain" : "cover"}
             fallbackSrc="https://via.placeholder.com/400x200"
             animation={`${fadeIn} 0.3s ease-in-out`}
             transition="transform 0.3s ease-in-out"
