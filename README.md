@@ -4,6 +4,8 @@
 
 A modern, responsive portfolio showcasing my journey as a full-stack developer. Built with React, TypeScript, and Chakra UI, featuring smooth animations and an intuitive user interface.
 
+🌐 **[View Live Demo](https://propfolio.netlify.app)**
+
 ![Portfolio Preview](/public/images/portfolio-preview.png)
 
 ## ✨ Features
