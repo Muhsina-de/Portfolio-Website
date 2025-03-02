@@ -1,5 +1,5 @@
-import { Container, Heading, Box, Button, Link, Flex, Text, VStack, HStack, Icon } from '@chakra-ui/react';
-import { MdCheckCircle, MdFileDownload, MdSchool } from 'react-icons/md';
+import { Container, Heading, Box, Text, VStack, HStack, Icon } from '@chakra-ui/react';
+import { MdCheckCircle, MdSchool } from 'react-icons/md';
 import { keyframes } from '@emotion/react';
 
 const gradientBg = keyframes`

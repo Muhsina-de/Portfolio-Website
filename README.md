@@ -4,7 +4,7 @@
 
 A modern, responsive portfolio showcasing my journey as a full-stack developer. Built with React, TypeScript, and Chakra UI, featuring smooth animations and an intuitive user interface.
 
-![Portfolio Preview](/public/images/portfolio-preview.jpg)
+![Portfolio Preview](/public/images/portfolio-preview.png)
 
 ## ✨ Features
 
