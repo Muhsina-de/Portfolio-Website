@@ -1,11 +1,17 @@
-import { Container, Heading, SimpleGrid, Box } from '@chakra-ui/react';
+import { Container, Heading, SimpleGrid, Box, Text, VStack, Icon } from '@chakra-ui/react';
 import { keyframes } from '@emotion/react';
 import { ProjectCard } from '../components/ProjectCard';
+import { FaCode } from 'react-icons/fa';
 
 const gradientBg = keyframes`
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+`;
+
+const shimmer = keyframes`
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
 `;
 
 export const Portfolio = () => {
@@ -30,6 +36,28 @@ export const Portfolio = () => {
       imageUrl: '/images/autodoculus-preview.png',
       deployedUrl: 'https://drive.google.com/file/d/1v6dhbXnMUriIFEPFtCMY4cYMiZ5L-vFM/view',
       githubUrl: 'https://github.com/KnifeDad/AutoDOCulus.git',
+    },
+    // Placeholder projects for future work
+    {
+      title: 'Project Coming Soon',
+      description: 'An exciting new project is in development. Stay tuned for an innovative solution that pushes the boundaries of web development and user experience.',
+      imageUrl: 'placeholder',
+      githubUrl: '#',
+      isPlaceholder: true
+    },
+    {
+      title: 'Future Project',
+      description: 'Another groundbreaking project is on the horizon. This space will soon showcase new technologies and creative solutions.',
+      imageUrl: 'placeholder',
+      githubUrl: '#',
+      isPlaceholder: true
+    },
+    {
+      title: 'In Development',
+      description: 'A new project is being crafted with cutting-edge technologies and innovative approaches. Check back soon for updates.',
+      imageUrl: 'placeholder',
+      githubUrl: '#',
+      isPlaceholder: true
     }
   ];
 
@@ -70,7 +98,62 @@ export const Portfolio = () => {
           px={[4, 6, 8]}
         >
           {projects.map((project, index) => (
-            <ProjectCard key={index} {...project} />
+            project.isPlaceholder ? (
+              <Box
+                key={index}
+                borderWidth="1px"
+                borderRadius="2xl"
+                overflow="hidden"
+                bg="whiteAlpha.100"
+                backdropFilter="blur(8px)"
+                borderColor="whiteAlpha.200"
+                transition="all 0.3s ease-in-out"
+                _hover={{
+                  transform: 'translateY(-8px)',
+                  borderColor: 'brand.accent',
+                }}
+              >
+                <Box
+                  height="200px"
+                  width="100%"
+                  position="relative"
+                  bg="gray.800"
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  _before={{
+                    content: '""',
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    background: 'linear-gradient(to right, transparent 0%, rgba(0, 163, 196, 0.1) 50%, transparent 100%)',
+                    backgroundSize: '2000px 100%',
+                    animation: `${shimmer} 3s linear infinite`,
+                  }}
+                >
+                  <Icon
+                    as={FaCode}
+                    boxSize={12}
+                    color="cyan.400"
+                    opacity={0.5}
+                  />
+                </Box>
+                <VStack align="start" spacing={4} p={6}>
+                  <Heading
+                    size="md"
+                    bgGradient="linear(to-r, cyan.400, blue.500)"
+                    bgClip="text"
+                  >
+                    {project.title}
+                  </Heading>
+                  <Text color="whiteAlpha.900">{project.description}</Text>
+                </VStack>
+              </Box>
+            ) : (
+              <ProjectCard key={index} {...project} />
+            )
           ))}
         </SimpleGrid>
       </Container>
