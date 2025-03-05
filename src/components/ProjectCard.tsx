@@ -1,26 +1,39 @@
+/**
+ * ProjectCard Component
+ * 
+ * A reusable card component that displays project information with interactive features:
+ * - Hover animations with glow effect
+ * - Image toggle between light and dark mode (when available)
+ * - Links to live demo and GitHub repository
+ * - Smooth transitions and animations
+ */
+
 import { Box, Image, Text, Link, VStack, HStack, Icon, Heading, IconButton } from '@chakra-ui/react';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { MdLightMode, MdDarkMode } from 'react-icons/md';
 import { keyframes } from '@emotion/react';
 import { useState } from 'react';
 
+// Animation for the card's glow effect
 const glowAnimation = keyframes`
   0% { box-shadow: 0 0 10px rgba(0, 163, 196, 0.3); }
   50% { box-shadow: 0 0 20px rgba(0, 163, 196, 0.5); }
   100% { box-shadow: 0 0 10px rgba(0, 163, 196, 0.3); }
 `;
 
+// Animation for smooth image transitions
 const fadeIn = keyframes`
   from { opacity: 0; }
   to { opacity: 1; }
 `;
 
+// Type definitions for component props
 interface ProjectCardProps {
   title: string;
   description: string;
   imageUrl: string;
-  lightImageUrl?: string;
-  deployedUrl?: string;
+  lightImageUrl?: string;  // Optional light mode image
+  deployedUrl?: string;    // Optional live demo URL
   githubUrl: string;
 }
 
@@ -32,10 +45,12 @@ export const ProjectCard = ({
   deployedUrl, 
   githubUrl 
 }: ProjectCardProps) => {
+  // State for managing dark/light mode toggle
   const [isDarkMode, setIsDarkMode] = useState(true);
   const currentImage = isDarkMode ? imageUrl : (lightImageUrl || imageUrl);
   const hasLightMode = !!lightImageUrl;
 
+  // Handler for theme toggle
   const handleToggle = () => {
     setIsDarkMode(prev => !prev);
   };
@@ -55,6 +70,7 @@ export const ProjectCard = ({
         animation: `${glowAnimation} 2s ease-in-out infinite`,
       }}
     >
+      {/* Image container with theme toggle */}
       <Box position="relative" overflow="hidden">
         <Box
           position="relative"
@@ -79,6 +95,7 @@ export const ProjectCard = ({
             }}
           />
         </Box>
+        {/* Theme toggle button - only shown if light mode image is available */}
         {hasLightMode && (
           <IconButton
             aria-label="Toggle theme"
@@ -98,6 +115,7 @@ export const ProjectCard = ({
             zIndex={2}
           />
         )}
+        {/* Hover overlay gradient */}
         <Box
           position="absolute"
           top={0}
@@ -113,6 +131,7 @@ export const ProjectCard = ({
         />
       </Box>
 
+      {/* Project information section */}
       <VStack align="start" spacing={4} p={6}>
         <Heading
           size="md"
@@ -122,7 +141,10 @@ export const ProjectCard = ({
           {title}
         </Heading>
         <Text color="whiteAlpha.900">{description}</Text>
+        
+        {/* Project links section */}
         <HStack spacing={4} pt={2}>
+          {/* Live demo link - only shown if deployedUrl is provided */}
           {deployedUrl && (
             <Link
               href={deployedUrl}
@@ -142,6 +164,7 @@ export const ProjectCard = ({
               </HStack>
             </Link>
           )}
+          {/* GitHub repository link */}
           <Link
             href={githubUrl}
             isExternal
