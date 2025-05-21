@@ -43,12 +43,13 @@ export const AboutMe = () => {
             <Heading
               as="h1"
               size="4xl"
-              bgGradient="linear(to-r, teal.400, orange.400)"
+              // bgGradient="linear(to-r, teal.400, orange.400)"
+               bgGradient="linear-gradient(to right, #6C1A8D, #F7B700)"
               bgClip="text"
               letterSpacing="tight"
               animation={`${textReveal} 1s ease-out`}
             >
-              Guy Ricketts
+              Muhsina Shinwari
             </Heading>
             <Text
               fontSize="2xl"
@@ -56,7 +57,7 @@ export const AboutMe = () => {
               animation={`${textReveal} 1s ease-out 0.3s forwards`}
               opacity="0"
             >
-              Full Stack Developer & Creative Problem Solver
+             I Design and Develop Websites That Stand Out!
             </Text>
           </VStack>
 
@@ -88,15 +89,15 @@ export const AboutMe = () => {
                   zIndex: 2,
                   borderRadius: 'full',
                 }}
-              >
-                <Image
-                  src={profileArtImg}
-                  alt="Guy Ricketts - Stylized Portrait"
-                  width="100%"
-                  height="100%"
-                  objectFit="cover"
-                  borderRadius="full"
-                />
+              > <Image
+        src={profileArtImg}
+        alt="Muhsina Shinwari - Stylized Portrait"                            
+        style={{
+          objectFit: 'cover',
+          objectPosition: 'top left',
+        }}
+        className="rounded-full"
+      />
               </Box>
             </Box>
 
@@ -124,25 +125,28 @@ export const AboutMe = () => {
                   <Heading
                     as="h2"
                     size="lg"
-                    bgGradient="linear(to-r, teal.400, orange.400)"
+                    // bgGradient="linear(to-r, teal.400, orange.400)"
+                    bgGradient="linear-gradient(to right, #6C1A8D, #F7B700)"
                     bgClip="text"
                   >
                     About Me
                   </Heading>
                   <Text color="whiteAlpha.900" lineHeight="tall">
-                    I'm Guy Ricketts, known as KnifeDad across platforms, a Full Stack Developer merging technical expertise with creative vision. 
-                    As the founder of The FOOKING Gaming Community, I've built an inclusive space where passion for gaming brings people together.
+                       I’m Muhsina Shinwari, a passionate Website Designer dedicated to crafting
+            clean, engaging, and accessible digital experiences. With a background in
+            visual arts and front‑end development, I blend aesthetics with code to
+            bring brands to life online.</Text>
+                  <Text color="whiteAlpha.900" lineHeight="tall">
+                    Over the past few years, I’ve collaborated with startups and agencies,
+            building responsive websites, e‑commerce platforms, and custom web
+            applications. I specialize in React, Tailwind CSS, and Figma‑driven design
+            workflows to ensure pixel‑perfect results.
                   </Text>
                   <Text color="whiteAlpha.900" lineHeight="tall">
-                    Life has shaped me in profound ways - I'm a devoted father to Adorian and Riley, and a loving dogfather to my French Bulldogs, 
-                    CJ and Chloe. Following the loss of my beloved wife to breast cancer, I've found strength and healing through creative expression, 
-                    channeling emotions into code, poetry, art, and music.
-                  </Text>
-                  <Text color="whiteAlpha.900" lineHeight="tall">
-                    My love for technical death metal and progressive metal mirrors my development philosophy - where precision meets innovation. 
-                    I'm particularly drawn to JRPGs for their rich storytelling and complex systems, which inspires how I approach creating 
-                    immersive digital experiences. Every project is an opportunity to blend technical excellence with creative vision.
-                  </Text>
+                     When I’m not behind the screen, you’ll find me illustrating digital
+            watercolors, exploring local art scenes, or mentoring up‑and‑coming
+            designers. Every project is an opportunity to merge creativity with
+            functionality—and I’m always eager for the next challenge.                  </Text>
                 </VStack>
               </Box>
             </VStack>

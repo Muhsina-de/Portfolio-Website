@@ -81,9 +81,10 @@ PropFolio/
 
 ## 🌟 Featured Projects
 
-1. **Procrastination Station** - Task management application
-2. **Cloud Control to Major Tom** - Weather dashboard application
-3. **AutoDOCulus** - Professional README generator
+1. **RememberTogether** - Digital sanctuary for those navigating the journey of grief and loss
+1. **Ripplet** - Thought Sharing System
+2. **BookShelf** - Brings the joy of book discovery to your fingertips!
+3. **RaveNest** - Where Tech Mentorship Rocks!
 
 ## 🔧 Development
 
@@ -107,18 +108,18 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🤝 Connect With Me
 
-- GitHub: [KnifeDad](https://github.com/KnifeDad)
-- LinkedIn: [Guy Ricketts](https://www.linkedin.com/in/guy-ricketts-5b3246354/)
-- Stack Overflow: [KnifeDad](https://stackoverflow.com/users/29859726/knifedad)
+- GitHub: [Muhsina-de](https://github.com/Muhsina-de)
+- LinkedIn: [Muhsina Shinwari](https://www.linkedin.com/in/muhsina-shinwari-30621a342/)
+- Stack Overflow: [Muhsina Shinwari](https://stackoverflow.com/users/28649871/muhsina-shinwari)
 
 ## 🙏 Acknowledgments
 
-- UCONN School of Engineering Bootcamp for the knowledge and support
+- Bootcamp for the knowledge and support
 - The open-source community for inspiration and resources
 - My family for their endless support and encouragement
 
 ---
 
 <div align="center">
-  Made with ❤️ by Guy Ricketts (KnifeDad)
+  Made by Muhsina Shinwari
 </div>

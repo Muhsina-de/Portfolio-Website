@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Link, Icon, Text } from '@chakra-ui/react';
+import { Box, Container, Flex, Link, Icon, Text, useColorModeValue } from '@chakra-ui/react';
 import { FaGithub, FaLinkedin, FaStackOverflow } from 'react-icons/fa';
 import { keyframes } from '@emotion/react';
 
@@ -12,17 +12,17 @@ const socialLinks = [
   {
     label: 'GitHub',
     icon: FaGithub,
-    href: 'https://github.com/KnifeDad',
+    href: 'https://github.com/Muhsina-de',
   },
   {
     label: 'LinkedIn',
     icon: FaLinkedin,
-    href: 'https://www.linkedin.com/in/guy-ricketts-5b3246354/',
+    href: 'https://www.linkedin.com/in/muhsina-shinwari-30621a342/',
   },
   {
     label: 'Stack Overflow',
     icon: FaStackOverflow,
-    href: 'https://stackoverflow.com/users/29859726/knifedad',
+    href: 'https://stackoverflow.com/users/28649871/muhsina-shinwari',
   },
 ];
 
@@ -33,7 +33,8 @@ export const Footer = () => {
       py={8}
       position="relative"
       backdropFilter="blur(10px)"
-      bg="rgba(26, 32, 44, 0.8)"
+      // bg="rgba(26, 32, 44, 0.8)"
+      bg={useColorModeValue('whiteAlpha.800', 'rgba(48, 6, 35, 0.43)')}
       borderTop="1px solid"
       borderColor="whiteAlpha.100"
       _before={{
@@ -43,7 +44,9 @@ export const Footer = () => {
         left: 0,
         right: 0,
         bottom: 0,
-        bgGradient: 'linear(to-r, rgba(0,163,196,0.1), rgba(0,0,0,0))',
+        // bgGradient: 'linear(to-r, rgba(0,163,196,0.1), rgba(0,0,0,0))',
+        // bg:{useColorModeValue('whiteAlpha.800', 'rgba(48, 6, 35, 0.43)')},
+        bgGradient:"linear-gradient(135deg,rgba(48, 6, 35, 0.43) 0%,rgba(78, 13, 54, 0.48) 100%)",
         backgroundSize: '200% 200%',
         animation: `${gradientAnimation} 15s ease infinite`,
         pointerEvents: 'none',
@@ -57,7 +60,7 @@ export const Footer = () => {
           gap={4}
         >
           <Text color="whiteAlpha.900">
-            © {new Date().getFullYear()} Guy Ricketts. All rights reserved.
+            © {new Date().getFullYear()} Muhsina Shinwari. All rights reserved.
           </Text>
 
           <Flex gap={6}>
@@ -69,7 +72,7 @@ export const Footer = () => {
                 rel="noopener noreferrer"
                 color="whiteAlpha.900"
                 _hover={{
-                  color: 'cyan.400',
+                  color: 'rgba(255, 217, 0, 0.92)',
                   transform: 'translateY(-2px)',
                 }}
                 transition="all 0.3s ease"

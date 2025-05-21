@@ -125,7 +125,8 @@ export const CustomCursor = () => {
         left={-4}
         width="8px"
         height="8px"
-        backgroundColor="cyan.400"
+        // backgroundColor="cyan.400"
+        backgroundColor="rgba(255, 217, 0, 0.92)"
         borderRadius="full"
         pointerEvents="none"
         zIndex={9999}
@@ -148,7 +149,8 @@ export const CustomCursor = () => {
         width="32px"
         height="32px"
         border="2px solid"
-        borderColor="cyan.400"
+        // borderColor="cyan.400"
+        borderColor="rgba(255, 217, 0, 0.92)"
         borderRadius="full"
         pointerEvents="none"
         zIndex={9999}

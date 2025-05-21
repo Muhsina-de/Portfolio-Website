@@ -80,7 +80,7 @@ export const Contact = () => {
             as="h2"
             size="2xl"
             textAlign="center"
-            bgGradient="linear(to-r, cyan.400, blue.500)"
+           bgGradient="linear(to-r, rgba(255, 217, 0, 0.92), rgba(255, 217, 0, 0.64))"
             bgClip="text"
             letterSpacing="tight"
           >
@@ -163,19 +163,19 @@ export const Contact = () => {
 
                 <Button
                   type="submit"
-                  colorScheme="cyan"
+                  colorScheme="pink"
                   size="lg"
                   width="full"
                   isLoading={formik.isSubmitting}
                   loadingText="Sending..."
-                  bgGradient="linear(to-r, cyan.400, blue.500)"
+                  bgGradient="linear(to-r, rgba(255, 217, 0, 0.92), rgba(255, 217, 0, 0.64))"
                   _hover={{
-                    bgGradient: "linear(to-r, cyan.500, blue.600)",
+                    bgGradient: "linear(to-r, rgba(255, 217, 0, 0.92), rgba(255, 217, 0, 0.64))",
                     transform: "translateY(-2px)",
                     animation: `${pulseAnimation} 2s ease-in-out infinite`,
                   }}
                   _active={{
-                    bgGradient: "linear(to-r, cyan.600, blue.700)",
+                    bgGradient: "linear(to-r, rgba(255, 217, 0, 0.66), rgba(255, 217, 0, 0.62))",
                   }}
                 >
                   Send Message
@@ -193,7 +193,7 @@ export const Contact = () => {
         right="10%"
         w="200px"
         h="200px"
-        bg="cyan.400"
+        bg="yellow.400"
         filter="blur(90px)"
         opacity={0.2}
         borderRadius="full"
@@ -204,7 +204,7 @@ export const Contact = () => {
         left="10%"
         w="250px"
         h="250px"
-        bg="blue.400"
+        bg="yellow.400"
         filter="blur(100px)"
         opacity={0.2}
         borderRadius="full"

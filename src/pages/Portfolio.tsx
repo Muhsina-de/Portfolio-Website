@@ -17,48 +17,49 @@ const shimmer = keyframes`
 export const Portfolio = () => {
   const projects = [
     {
-      title: 'Procrastination Station',
-      description: 'A sleek, modern task management application with a focus on user experience and productivity. Built with vanilla JavaScript, CSS, and HTML. Features include task management, smart organization, visual progress tracking, and dark/light mode.',
-      imageUrl: '/images/procrastination-station-dark-mode.png',
-      lightImageUrl: '/images/procrastination-station-light-mode.png',
-      githubUrl: 'https://github.com/KnifeDad/Procrastination-Station',
+      
+      title: 'Remember Together',
+      description: 'A gentle, supportive platform for honoring memories and navigating grief. Built with modern technologies to preserve memories, express emotions through art, and foster meaningful community connection. Users can share, and find solace in a compassionate digital space.',
+      imageUrl: '/images/proj1-remeberTogether.png',
+      deployedUrl: 'https://remember-together.onrender.com/',
+      githubUrl: 'https://github.com/KnifeDad/RememberTogether.git ',
     },
     {
-      title: 'Cloud Control to Major Tom',
-      description: 'A modern weather dashboard application providing real-time weather conditions and 5-day forecasts worldwide. Built with TypeScript, Node.js, Express.js, and integrates the OpenWeather API. Features Bootstrap 5 UI, custom animations, and responsive design.',
-      imageUrl: '/images/cloud-control-tokyo.png',
-      deployedUrl: 'https://cloud-control-to-major-tom.onrender.com/',
-      githubUrl: 'https://github.com/KnifeDad/Cloud-Control-to-Major-Tom.git',
+      title: 'Ravenest',
+      description: "RaveNest is a modern mentorship platform connecting aspiring and experienced developers. Built with React 18, Node.js, Express, and PostgreSQL, it offers mentor matching, session scheduling, secure auth, and a music-inspired UI to foster growth and collaboration.",
+      imageUrl: '/images/proj2-ravenest.png',
+      deployedUrl: 'https://ravenest-kma6.onrender.com/ ',
+      githubUrl: 'https://github.com/Muhsina-de/Ravenest',
     },
     {
-      title: 'AutoDOCulus',
-      description: 'A command-line application that dynamically generates professional README.md files for projects. Built with Node.js and Inquirer, it streamlines documentation by prompting users for project details and automatically generating well-structured README files with essential sections.',
-      imageUrl: '/images/autodoculus-preview.png',
-      deployedUrl: 'https://drive.google.com/file/d/1v6dhbXnMUriIFEPFtCMY4cYMiZ5L-vFM/view',
-      githubUrl: 'https://github.com/KnifeDad/AutoDOCulus.git',
+      title: 'Ripplet',
+      description: 'Ripple API is a RESTful social network backend where users can post thoughts, react, and build friendships. Built with Express.js, MongoDB, and Mongoose, it includes user and thought models, full CRUD operations, and dynamic reaction tracking.',
+      imageUrl: '/images/proj3-ripplet.png',
+      deployedUrl: 'https://github.com/Muhsina-de/Ripplet',
+      githubUrl: 'https://github.com/Muhsina-de/Ripplet',
     },
     // Placeholder projects for future work
     {
-      title: 'Project Coming Soon',
-      description: 'An exciting new project is in development. Stay tuned for an innovative solution that pushes the boundaries of web development and user experience.',
-      imageUrl: 'placeholder',
-      githubUrl: '#',
-      isPlaceholder: true
+      title: 'Cloud Control',
+      description: 'Cloud Control is a responsive weather dashboard that shows real-time and 5-day forecasts using the OpenWeather API. It features city search history, server-side data integration, and is deployed via Render for fast, reliable access.',
+      imageUrl: '/images/proj5-weather.png',
+      deployedUrl: 'https://cloud-control-to-major-tom.onrender.com/',
+      githubUrl: 'https://github.com/Muhsina-de/WeatherAPI',
+    },
+     {
+      title: 'Book Shelf',
+      description: 'BookShelf is a MERN stack application for discovering and saving books using the Google Books API. It includes user authentication, responsive UI, and a personal collection feature for tracking favorite reads.',
+      imageUrl: '/images/proj4-bookShelf.png',
+      deployedUrl: 'https://bookshelf-frontend-mp1p.onrender.com/',
+      githubUrl: 'https://github.com/Muhsina-de/BookShelf',
     },
     {
-      title: 'Future Project',
+      title: 'On Going Project',
       description: 'Another groundbreaking project is on the horizon. This space will soon showcase new technologies and creative solutions.',
-      imageUrl: 'placeholder',
+      imageUrl: '/images/proj6-employeeTracker.png',
       githubUrl: '#',
       isPlaceholder: true
     },
-    {
-      title: 'In Development',
-      description: 'A new project is being crafted with cutting-edge technologies and innovative approaches. Check back soon for updates.',
-      imageUrl: 'placeholder',
-      githubUrl: '#',
-      isPlaceholder: true
-    }
   ];
 
   return (
@@ -86,7 +87,7 @@ export const Portfolio = () => {
           size="2xl"
           textAlign="center"
           mb={12}
-          bgGradient="linear(to-r, cyan.400, blue.500)"
+          bgGradient="linear(to-r, rgba(255, 217, 0, 0.92), rgba(255, 217, 0, 0.64))"
           bgClip="text"
           letterSpacing="tight"
         >
@@ -143,7 +144,7 @@ export const Portfolio = () => {
                 <VStack align="start" spacing={4} p={6}>
                   <Heading
                     size="md"
-                    bgGradient="linear(to-r, cyan.400, blue.500)"
+                    bgGradient="linear(to-r, rgba(255, 217, 0, 0.92), rgba(255, 217, 0, 0.64))"
                     bgClip="text"
                   >
                     {project.title}

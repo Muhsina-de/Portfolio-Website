@@ -16,9 +16,9 @@ import { useState } from 'react';
 
 // Animation for the card's glow effect
 const glowAnimation = keyframes`
-  0% { box-shadow: 0 0 10px rgba(0, 163, 196, 0.3); }
-  50% { box-shadow: 0 0 20px rgba(0, 163, 196, 0.5); }
-  100% { box-shadow: 0 0 10px rgba(0, 163, 196, 0.3); }
+  0% { box-shadow: 0 0 10px rgba(218, 32, 121, 0.3) }
+  50% { box-shadow: 0 0 20px rgba(218, 32, 121,0.5); }
+  100% { box-shadow: 0 0 10px rgba(218, 32, 121, 0.3); }
 `;
 
 // Animation for smooth image transitions
@@ -135,7 +135,7 @@ export const ProjectCard = ({
       <VStack align="start" spacing={4} p={6}>
         <Heading
           size="md"
-          bgGradient="linear(to-r, cyan.400, blue.500)"
+          bgGradient="linear(to-r, rgba(255, 217, 0, 0.92), rgba(255, 217, 0, 0.64))"
           bgClip="text"
         >
           {title}
@@ -153,7 +153,7 @@ export const ProjectCard = ({
               alignItems="center"
               color="brand.accent"
               _hover={{
-                color: 'cyan.400',
+                color: 'rgba(218, 32, 121, 1)',
                 transform: 'translateY(-2px)',
               }}
               transition="all 0.2s"
@@ -172,7 +172,7 @@ export const ProjectCard = ({
             alignItems="center"
             color="brand.accent"
             _hover={{
-              color: 'cyan.400',
+              color: 'rgba(218, 32, 122, 0.81)',
               transform: 'translateY(-2px)',
             }}
             transition="all 0.2s"
